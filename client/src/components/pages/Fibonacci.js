@@ -1,9 +1,10 @@
 import React from "react";
 import FibonacciForm from "../forms/FibonacciForm";
+import axios from "axios";
 
 class Fibonacci extends React.Component {
   submit = data => {
-    console.log(data);
+    axios.post("/api/fibonacci", { data }).then(res => res.data);
   };
 
   render() {
