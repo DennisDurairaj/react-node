@@ -9,9 +9,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors({ origin: "http://localhost:3000" }));
 
-function fibonacci(num) {
+function fibonacci() {
   var a = 1,
-    b = 2,
+    b = 0,
+    num = 1400,
     temp;
 
   while (num >= 0) {
@@ -24,9 +25,8 @@ function fibonacci(num) {
   return b;
 }
 
-app.post("/api/fibonacci", (req, res) => {
-  console.log(req.body);
-  var result = fibonacci(req.body.data.count);
+app.get("/api/fibonacci", (req, res) => {
+  var result = fibonacci();
   console.log(result);
   res.status(200).json({ result });
 });
