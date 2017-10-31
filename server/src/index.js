@@ -1,11 +1,13 @@
 import express from "express";
 import path from "path";
 import bodyParser from "body-parser";
+import cors from "cors";
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors({ origin: "http://localhost:3000" }));
 
 function fibonacci(num) {
   var a = 1,

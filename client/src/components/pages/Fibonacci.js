@@ -4,7 +4,9 @@ import axios from "axios";
 
 class Fibonacci extends React.Component {
   submit = data => {
-    axios.post("/api/fibonacci", { data }).then(res => res.data);
+    axios
+      .post("http://46.101.216.250:9000/api/fibonacci", { data })
+      .then(res => res.data);
   };
 
   render() {
