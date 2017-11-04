@@ -1,6 +1,6 @@
-import React from "react";
-import FibonacciForm from "../forms/FibonacciForm";
 import axios from "axios";
+import React from "react";
+// import FibonacciForm from "../forms/FibonacciForm";
 
 class Fibonacci extends React.Component {
   submit = data => {
@@ -13,7 +13,7 @@ class Fibonacci extends React.Component {
     return (
       <div>
         <h1>Fibonacci</h1>
-        <FibonacciForm submit={this.submit} />
+        {/* <FibonacciForm submit={this.submit} /> */}
       </div>
     );
   }
